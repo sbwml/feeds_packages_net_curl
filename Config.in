@@ -105,6 +105,14 @@ config LIBCURL_NGHTTP2
 	bool "HTTP2 protocol"
 	default y
 
+config LIBCURL_NGHTTP3
+	bool "HTTP3 protocol"
+	default n
+
+config LIBCURL_NGTCP2
+	bool "QUIC protocol"
+	default n
+
 comment "Miscellaneous"
 
 config LIBCURL_PROXY
