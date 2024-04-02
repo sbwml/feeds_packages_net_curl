@@ -60,6 +60,7 @@ PKG_CONFIG_DEPENDS:= \
   CONFIG_LIBCURL_NGHTTP2 \
   CONFIG_LIBCURL_NGHTTP3 \
   CONFIG_LIBCURL_NGTCP2 \
+  CONFIG_LIBCURL_OPENSSL_QUIC \
   \
   CONFIG_LIBCURL_COOKIES \
   CONFIG_LIBCURL_CRYPTO_AUTH \
@@ -139,6 +140,7 @@ CONFIGURE_ARGS += \
 	$(if $(CONFIG_LIBCURL_NGHTTP2),--with-nghttp2="$(STAGING_DIR)/usr",--without-nghttp2) \
 	$(if $(CONFIG_LIBCURL_NGHTTP3),--with-nghttp3="$(STAGING_DIR)/usr",--without-nghttp3) \
 	$(if $(CONFIG_LIBCURL_NGTCP2),--with-ngtcp2="$(STAGING_DIR)/usr",--without-ngtcp2) \
+	$(if $(CONFIG_LIBCURL_OPENSSL_QUIC),--with-openssl-quic,--without-openssl-quic) \
 	\
 	$(call autoconf_bool,CONFIG_LIBCURL_DICT,dict) \
 	$(call autoconf_bool,CONFIG_LIBCURL_FILE,file) \
